@@ -11,11 +11,12 @@ import java.text.SimpleDateFormat;
  */
 public class ExcelRead {
 
-    public static SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd");
+    public static SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
 
     public static void main(String[] args) throws IOException {
 
-        FileInputStream fileIn = new FileInputStream("C:/ALL/temp/read.xls");
+        //FileInputStream fileIn = new FileInputStream("C:/ALL/temp/read.xls");
+        FileInputStream fileIn = new FileInputStream("templates/read.xls");
         Workbook wb = new HSSFWorkbook(fileIn);
 
         for(int i=0;i<wb.getNumberOfSheets();i++){
@@ -24,6 +25,8 @@ public class ExcelRead {
                 for(Cell cell : row){
                     CellReference cellRef = new CellReference(row.getRowNum(), cell.getColumnIndex());
                     System.out.print(cellRef.formatAsString());
+                    System.out.print(" - ");
+                    System.out.print(cell.getCellType());
                     System.out.print(" - ");
                     System.out.print("row=" + cellRef.getRow()+" - ");
                     System.out.print("column=" + cellRef.getCol()+" - ");
