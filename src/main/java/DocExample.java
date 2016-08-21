@@ -15,9 +15,9 @@ public class DocExample {
         XWPFDocument document= new XWPFDocument();
         XWPFParagraph paragraph = document.createParagraph();
         XWPFRun run=paragraph.createRun();
-        run.setText("HelloWorld from Vladimir Vysokomornyi" +
+        run.setText("HelloWorld from Vladimir Vysokomornyi " +
                 "during presentation \"Excel reports using Apache POI library\"." +
-                "Wednesday-24-08-2016! ");
+                " Wednesday-24-08-2016! ");
 
         FileOutputStream out = new FileOutputStream(new File("reports/file.docx"));
         document.write(out);
