@@ -29,7 +29,4 @@ public class DocExample {
         System.out.println("createparagraph.docx written successfully");
 
     }
-
-
-
 }
