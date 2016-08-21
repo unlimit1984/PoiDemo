@@ -15,7 +15,6 @@ public class ExcelRead {
 
     public static void main(String[] args) throws IOException {
 
-        //FileInputStream fileIn = new FileInputStream("C:/ALL/temp/read.xls");
         FileInputStream fileIn = new FileInputStream("templates/read.xls");
         Workbook wb = new HSSFWorkbook(fileIn);
 
