@@ -48,7 +48,6 @@ public class ExcelFormula {
         Cell cell7 = row7.createCell(0);
         cell7.setCellFormula("SUM(A4:A7)");
 
-
         FileOutputStream fos = new FileOutputStream("reports/Formulas.xls");
         wb.write(fos);
         fos.close();
